@@ -15,6 +15,10 @@ const (
 
 	// MemStoreKey defines the in-memory store key
 	MemStoreKey = "mem_kyc"
+
+	KycKey = "Kyc/value/"
+
+	KycCountKey = "Kyc/count/"
 )
 
 func KeyPrefix(p string) []byte {

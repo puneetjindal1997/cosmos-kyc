@@ -7,7 +7,18 @@ option go_package = "kyc/x/kyc/types";
 
 // Msg defines the Msg service.
 service Msg {
-    // this line is used by starport scaffolding # proto/tx/rpc
+      rpc CreateKyc(MsgCreateKyc) returns (MsgCreateKycResponse);
+// this line is used by starport scaffolding # proto/tx/rpc
+}
+
+message MsgCreateKyc {
+  string creator = 1;
+  string doc = 2;
+  string description = 3;
+}
+
+message MsgCreateKycResponse {
+  uint64 id = 1;
 }
 
 // this line is used by starport scaffolding # proto/tx/message
